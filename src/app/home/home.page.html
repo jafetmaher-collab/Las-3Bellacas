@@ -1,14 +1,16 @@
-<ion-header class ="ion-padding ion-no-border"> 
-<ion-button expand= "block" >Block</ion-button> 
+<ion-header>
+  <ion-button expand="block" (click)="counterUp()"[disabled]="numero==MAXIMO"> <ion-icon name="car-sport-outline"></ion-icon></ion-button>
 </ion-header>
-<ion-content [fullscreen]="true"> 
-<!--one-way binding (Interpolacion) -->
-<div
-  class ="big-font"> 
-   {{numero}}
-</div>
+
+<ion-content [fullscreen]="true">
+
+  <!-- One-way binding (Interpolación) -->
+  <div class="center-content big-font">
+    {{numero}}
+  </div>
 </ion-content>
 
-<ion-footer>
-  <ion-button expand ="block">Block</ion-button>
+<ion-footer class ="ion-padding ion-no-border">
+  <ion-button expand="block" (click)="counterDown()"[disabled]="numero==MINIMO">Block</ion-button>
+  <ion-icon name="car-sport-outline"></ion-icon>
 </ion-footer>
