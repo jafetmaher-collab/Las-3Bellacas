@@ -89,13 +89,10 @@ export class HomePage {
 
       }
 
-      // ACTUALIZA LA PANTALLA
       this.cdr.detectChanges();
     }
   }
 
-
-  // AUMENTAR
   async counterUp() {
 
     if (this.numero < this.MAXIMO) {
@@ -107,9 +104,6 @@ export class HomePage {
       console.log('Up:', this.numero);
     }
   }
-
-
-  // DISMINUIR
   async counterDown() {
 
     if (this.numero > this.MINIMO) {

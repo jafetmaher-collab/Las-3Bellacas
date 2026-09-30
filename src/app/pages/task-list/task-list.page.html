@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class = "ion-text-center ion-title-bold" >Mis Tareas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- IonItem: Alamcenar diferentes elemetos: Imagenes, imputs, botones o formularios-->
+   <ion-item>
+    <!-- IonInput: por defecto son de tipo texto
+     Recomendacion: siempre agregar un nombre-->
+    <ion-input
+      type = "text"
+      placeholder ="Nueva Tarea"
+      name = "task" 
+      /* Tow-Way Data Binding (Enlace Bidireccional) */
+      [(ngmodel)] ="task"
+      />
+      <ion-button (click) ="addTask()" [disabled]="!task"> Peopwety 'addTask'
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+   </ion-item>
+ 
+</ion-content>
